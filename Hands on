@@ -1,0 +1,50 @@
+import java.util.Scanner;
+import java.util.HashMap;
+public class Hands on {
+    static HashMap<String, HashMap<Float, Integer>> inventory = new HashMap<>();
+    static void addItem() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Add Item: ");
+        String ItemName = scanner.nextLine();
+        System.out.println("Enter Item price: ");
+        Double itemprice = Double.parseDouble(scanner.nextLine());
+
+        if (inventory.containsKey(ItemName)) {
+            System.out.println("Item already Exists in the inventory.");
+        }
+    }
+
+    public static void main(String[] args) {
+         HashMap<String, HashMap<Float, Integer>> inventory = new HashMap<>();
+        HashMap <Float, Integer> updatequantity = new HashMap<>();
+        Float itemprice;
+        updatequantity.put(itemprice, 1);
+        String ItemName;
+        inventory.put(ItemName, updatequantity);
+        System.out.println("Item Added!");
+
+    static void displayInventory() {
+        if (inventory.isEmpty()) {
+            System.out.println("Inventory Empty!");
+            return;
+        }
+        System.out.println("Inventory list: ");
+        for (String itemname : inventory.keySet());
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter Item name: ");
+        String itemname = scanner.nextLine();
+        System.out.println("Enter new quantity: ");
+        Double newquantity = Double.parseDouble(scanner.nextLine());
+}
+    }
+
+public static void main(String[] args) {
+        System.out.println("1. Add item");
+        System.out.println("2. Set Quantity");
+        System.out.println("3. Display Inventory");
+        System.out.println("4. Exit");
+        System.out.println("Enter your choice: ");
+    }
+}
